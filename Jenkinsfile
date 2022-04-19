@@ -16,7 +16,7 @@ pipeline {
         }
         stage('code checkout') {
             steps {
-                bat "mvn clean -f helloworld"
+                checkout scm
             }
         }
         stage('build') {
