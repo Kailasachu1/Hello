@@ -19,15 +19,5 @@ pipeline {
                 checkout scm
             }
         }
-        stage('test') {
-            steps {
-                test scm
-            }
-        }
-        stage('upload to nexus') {
-            steps {
-                bat "mvn package -f helloworld"
-            }
-        }
     }
 }
