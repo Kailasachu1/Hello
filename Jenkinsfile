@@ -21,7 +21,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                bat "mvn test -f helloworld"
+                bat "mvn build -f helloworld"
             }
         }
         stage('upload to nexus') {
