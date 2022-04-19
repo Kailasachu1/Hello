@@ -2,7 +2,7 @@ pipeline {
     agent any
         stage('git repo & clean') {
             steps {
-                bat "rmdir  /s /q helloworld"
+                //bat "rmdir  /s /q helloworld"
                 bat "git clone https://github.com/SravanVenus/Hello.git"
                 bat "mvn clean -f helloworld"
             }
