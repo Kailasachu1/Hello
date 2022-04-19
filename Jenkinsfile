@@ -21,7 +21,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                bat "mvn test -f helloworld"
+                test scm
             }
         }
         stage('upload to nexus') {
