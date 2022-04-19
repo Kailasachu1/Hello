@@ -21,7 +21,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                call mvn test -f helloworld
+                bat mvn test -f helloworld
             }
         }
         stage('upload to nexus') {
