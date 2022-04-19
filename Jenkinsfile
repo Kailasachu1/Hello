@@ -19,9 +19,9 @@ pipeline {
                 checkout scm
             }
         }
-        stage('build') {
+        stage('test') {
             steps {
-                bat "mvn build -f helloworld"
+                bat "mvn test -f helloworld"
             }
         }
         stage('upload to nexus') {
