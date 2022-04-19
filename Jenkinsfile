@@ -1,16 +1,16 @@
 pipeline {
     agent any
-        stage('git repo & clean') {
+        stage('code checkout') {
             steps {
                 bat "mvn clean -f helloworld"
             }
         }
-        stage('test') {
+        stage('build') {
             steps {
                 bat "mvn test -f helloworld"
             }
         }
-        stage('package') {
+        stage('upload to nexus') {
             steps {
                 bat "mvn package -f helloworld"
             }
