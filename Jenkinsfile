@@ -8,7 +8,7 @@ pipeline {
         
         stage('build') {
             steps {
-                echo ...Hello-World...
+                echo '...Hello-World...'
             }
         }
         stage('package') {
